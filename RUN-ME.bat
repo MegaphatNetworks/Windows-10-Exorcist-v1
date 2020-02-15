@@ -1,0 +1,1 @@
+@powershell.exe -executionpolicy bypass -file .\Win10Exorcist.ps1
