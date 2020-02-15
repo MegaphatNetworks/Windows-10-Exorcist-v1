@@ -96,24 +96,24 @@ To change the settings, open the script in a text editor such as Notepad++ or PN
 line 739 and you will see a bunch of variables.  Let's go through them.  Please note that 0 means off and 1 means on.
 
 Global Execution is performed on a machine-level basis.  All changes made here are machine wide and affect all users.  Here are the default settings.
-	$doGlobal_Config = 1				#Change this to 1 in order to execute ANY Admin Privileged-level routines
-	$doGlobal_RemoveMSCrap = 1			#Change to 1 in order to remove the MS added crapware
+	$doGlobal_Config = 1			#Change this to 1 in order to execute ANY Admin Privileged-level routines
+	$doGlobal_RemoveMSCrap = 1		#Change to 1 in order to remove the MS added crapware
 	$doGlobal_RemoveOtherCrap = 1		#Change to 1 in order to get rid of sponsored crapware
 	$doGlobal_CleanRegCrapware = 1		#Change to 1 in order to clean the registry from crapware.  Should be performed if doGlobal_RemoveOtherCrap = 1
 	$doGlobal_DisableTelemetry = 1		#Change to 1 in order to Disable MS telemetry and tracking.
 	$doGlobal_DisableWindowsCortana = 1	#Change to 1 in order to turn off Cortana as the Windows Search Provider
 	$doGlobal_DisableEdgePDF = 1		#Change to 1 in order to disable MS Edge as the default PDF reader
-	$doGlobal_FixSvcDMW = 0				#Change to 1 in order to fix the DMW service which may be affected by the operations within
-	$doGlobal_FixCalculator = 0			#Change to 1 in order to fix the calculator app
+	$doGlobal_FixSvcDMW = 0			#Change to 1 in order to fix the DMW service which may be affected by the operations within
+	$doGlobal_FixCalculator = 0		#Change to 1 in order to fix the calculator app
 	$doGlobal_UninstallOneDrive = 1		#Change to 1 in order to uninstall MS OneDrive
 	$doGlobal_Remove3DObjects = 1		#Change to 1 in order to Remove the 3D Objects folder from Explorer
 	$doGlobal_SetSystemPolicies = 1		#Change to 1 in order to set system policies to prevent crapware from returning
 	$doGlobal_SetUpdatePolicies = 1		#Change to 1 in order to set Windows Updates policies to prevent Windows Updates from being automatic
 
 Profile Execution is performed on a per-profile basis.  All changes made here are only on the user profile.  Here are the default settings.	
-	$doProfile_Config = 1 				#Change this to 1 in order to execute ANY Profile-level routines
-	$doProfile_DisableCDM = 1			#Change to 1 in order to disable MScontent delivery
-	$doProfile_DisableWindowsCortana = 1#Change to 1 in order to turn off Cortana as the Windows Search Provvider to the logged-on profile
+	$doProfile_Config = 1 			#Change this to 1 in order to execute ANY Profile-level routines
+	$doProfile_DisableCDM = 1		#Change to 1 in order to disable MScontent delivery
+	$doProfile_DisableWindowsCortana = 1	#Change to 1 in order to turn off Cortana as the Windows Search Provvider to the logged-on profile
 	$doProfile_UnPinStartMenuItems = 0	#Change to 1 in order to Un-pin start menu items
 	$doProfile_DisableTracking = 1		#Change to 1 in order to disable MS tracking
 	$doProfile_SetProfilePolicies = 1	#Change to 1 in order to set profile policies to disable Windows Experience features and settings
