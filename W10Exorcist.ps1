@@ -762,7 +762,6 @@ Function Global_SetUpdatePolicies {
 	$CMRSA = "$Env:SystemDrive\Temp\CMRS\Global.txt"
 	$CMRSU = "$Env:Temp\CMRS\Profile.txt"
 
-	PS-RegisterScript
 	Start-Transcript -OutputDirectory "$CMRSP" | Out-Null
 
 	If (!($doGlobal_Config)) {
@@ -792,6 +791,7 @@ Function Global_SetUpdatePolicies {
 				Wait 2
 				Start-Process PowerShell.exe -ArgumentList ("-NoProfile -ExecutionPolicy Bypass -File `"{0}`" elevate" -f $PSCommandPath) -Verb RunAs
 			} Else {
+				PS-RegisterScript
 				Say "      Script executed with elevated rights - continuing."
 				Say "      Performing Privileged execution routines..."
 				#We have Elevated rights, execute the rest of the Global routines.
@@ -820,6 +820,7 @@ Function Global_SetUpdatePolicies {
 	} Else {	
 		#Check if non-admin execution has been performed
 		#Execute Profile-level routines
+		PS-RegisterScript
 		Say "Starting the execution of the script for the user profile $env:username..."
 		If (!($doProfile_DisableCDM)) {Say "      doProfile_DisableCDM set to 0, not executing Profile_DisableCDM"} Else {Profile_DisableCDM}
 		If (!($doProfile_DisableWindowsCortana)) {Say "      doProfile_DisableWindowsCortana set to 0, not executing Profile_DisableWindowsCortana"} Else {Profile_DisableWindowsCortana}
