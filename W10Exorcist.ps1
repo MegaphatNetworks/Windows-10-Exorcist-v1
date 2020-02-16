@@ -806,7 +806,6 @@ Function Global_SetUpdatePolicies {
 				If (!($doGlobal_Remove3DObjects )) {Say "      doGlobal_Remove3DObjects set to 0, not executing Global_Remove3DObjects"} Else {Global_Remove3DObjects}
 				If (!($doGlobal_SetSystemPolicies)) {Say "      doGlobal_SetSystemPolicies set to 0, not executing Global_SetSystemPolicies"} Else {Global_SetSystemPolicies}
 				If (!($doGlobal_SetUpdatePolicies)) {Say "      doGlobal_SetUpdatePolicies set to 0, not executing Global_SetUpdatePolicies"} Else {Global_SetUpdatePolicies}
-				If ($global:Need2Reboot) {PS-RegisterScript}
 				Say "      Privileged-level routine execution is completed."
 			} 
 		} Else {
@@ -826,7 +825,6 @@ Function Global_SetUpdatePolicies {
 		If (!($doProfile_UnPinStartMenuItems)) {Say "      doProfile_UnPinStartMenuItems set to 0, not executing Profile_UnPinStartMenuItems"} Else {Profile_UnPinStartMenuItems}
 		If (!($doProfile_DisableTracking)) {Say "      doProfile_DisableTracking set to 0, not executing Profile_DisableTracking"} Else {Profile_DisableTracking}
 		If (!($doProfile_SetProfilePolicies)) {Say "      doProfile_SetProfilePolicies set to 0, not executing Profile_SetProfilePolicies"} Else {Profile_SetProfilePolicies}
-		If ($global:Need2Reboot) {PS-RegisterScript}
 		Say "Completed the execution of the script for the user profile $env:username."
 	}
 	
@@ -834,6 +832,7 @@ Function Global_SetUpdatePolicies {
     Stop-Transcript | Out-Null
     
     If ($global:Need2Reboot) {
+    		PS-RegisterScript
 		Say "Your system has been modified and requires a restart.  Automatically restarting in 10 seconds..."
 		Wait 10
 		Restart-Computer
