@@ -1,11 +1,11 @@
-#The Windows 10 Exorcist                                    
-##by Gabriel Polmar                                      
-##Megaphat Networks                                      
-##www.megaphat.info                                      
+# The Windows 10 Exorcist                                    
+## by Gabriel Polmar                                      
+## Megaphat Networks                                      
+## www.megaphat.info                                      
 
-##IMPORTANT: This script will make SEVERE changes to your system(s).  That said, let's move on.
+## IMPORTANT: This script will make SEVERE changes to your system(s).  That said, let's move on.
 
-###INTRODUCTION.  
+### INTRODUCTION.  
 For decades people have called Microsoft the Evil Empire.  I refused to accept this descriptive
 term as they were simply a very successful software company which I have worked with, respected and watch 
 grow.  In time became beyond wealthy and even greedy but still, I refused to call them by this term.  As the
@@ -26,7 +26,7 @@ MS stuffed a bunch of demons inside of my machine and I wanted them out!  So I d
 of VM's before I was confortable enough to test it on a real machine, then I tested it on my (another shout out) Plex box
 and you know what?  The difference is pretty significant.  
 
-###BUT WHY?  
+### BUT WHY?  
 "There are a bunch of scripts out there that can do this, right?"  Sure.  But I've tried them on sandboxed VM's
 and for some reason there are so many privacy settings that were still not resolved.  I have a lot of customers that rely 
 on privacy, law firms, medical facilities and privacy is key to their business.  They are small, medium and large businesses 
@@ -50,7 +50,7 @@ crossed a line and betrayed the trust of customers and users.  Also I work with 
 the one thing I have learned is when ANY system calls home without consent of the owner, it has breached a level of 
 trust that needs immediate remedy.  
 
-###OPERATION.  
+### OPERATION.  
 This script is designed to operated on a multi-user system.  While one user may run the script as admin, 
 other users will find that there are still crapware features and tracking telemetry activities happening on their account.       
 This script will load once for an administrator, removing all primary crapware.  Each subsequent user who logs on       
@@ -58,19 +58,19 @@ the script will then clean their profile as well.  It is up to the system admini
 this script and when to discontinue using it. The script will automatically determine if it has been previously executed 
 under the logged on user profile as well as administrator to prevent itself from re-execution.
 
-###HOME USERS.  
+### HOME USERS.  
 Simply run this script on each  of the profiles on the computer, with an Administrator account being the 
 first to execute the script and non-Administrators (or other Administrators) thereafter.  
 
-###DOMAIN/AD SYSTEMS.  
+### DOMAIN/AD SYSTEMS.  
 If you are using this in a domain environment, I would suggest including this script in your logon script.
 Execution could be as simple as launching from a batch file such as: powershell.exe -ExecutionPolicy Bypass -File .\ThisScript.ps1
 Be sure it executes the first time logged in as a Domain Admin.
 
-###NON-DOMAIN/AD BUSINESS SYSTEMS.
+### NON-DOMAIN/AD BUSINESS SYSTEMS.
 Run the script the same way as listed above for Home Users.
 
-###HIPAA Compliancy Notice.  
+### HIPAA Compliancy Notice.  
 Windows 10 is NOT a HIPAA-compliant OS.  Why?  Because of all of the phone-home telemetry included.
 While I have not performed any network sniffing to determine if Windows 10 is actually sending any sensitive data back to MS, 
 the mere fact that it phones home with your activity and has access to your information makes it inherently not HIPAA compliant.
@@ -81,7 +81,7 @@ to see if my OS attempts to contact MS and using pfSense (***LOVE IT***) I was a
 did notice some minor telemetry other than MS Updates, no data was transmitted.
 
 
-###ABOUT THE CODE: 
+### ABOUT THE CODE: 
 Please note that it took about 200 hours of research, 300 hours of coding and testing to get this script working.   
 If you find it useful, please give us credit if you clone the script.  If you really want to show your thanks, I would appreciate 
 any donation you could make to help pay for the time I spend doing this as well as getting me more coffee to keep me coding!    
