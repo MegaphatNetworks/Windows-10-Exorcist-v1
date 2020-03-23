@@ -97,3 +97,8 @@ Function Global_SetSystemPolicies {
 	} Else {
 		Say "  This user account is not an Admin on the system."
 	}
+
+	Say "Windows 10 Exorcist - Camera and Microphone has been restored and set to manual."
+	Stop-Transcript | Out-Null
+   
+	Write "The power of Christ compels you! - Fr Damien Karras 1973"
