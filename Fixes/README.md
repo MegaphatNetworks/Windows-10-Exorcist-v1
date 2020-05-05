@@ -10,9 +10,9 @@
   This patch allows for a computer to synchronize with a time server.  By default it will synchronize with the pre-defined time
   server within Windows.  If the computer to be executed on is a Domain-level computer, you must perform the following adjustment:
   1. Open the PS1 file with a text Editor such as Notepad++
-  2. Locate the function called ## Function Global_SetSystemPolicies
-  3. There are 4 regset commands, the first has a #hash mark in front of it, remove the #hash so #regset will only be regset
-  4. The second line has no #hash mark in front of it, put one there.
+  2. Locate the function called Function Global_SetSystemPolicies
+  3. There are 4 regset commands, the first has a # hash mark in front of it, remove the #hash so #regset will only be regset
+  4. The second line has no # hash mark in front of it, put one there.
   5. Save the PS1 file and execute with admin rights.
   
 # WinUpdates.ps1
