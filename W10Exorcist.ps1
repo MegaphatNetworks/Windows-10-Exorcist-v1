@@ -829,6 +829,8 @@ Function Global_SetUpdatePolicies {
     Stop-Transcript | Out-Null
     
     If ($global:Need2Reboot) {
+    		#Add a comment to PS-RegisterScript if you do not want to have your statistics collected.  
+		#Statistics are collected to determine script performance, based on Language, codeset, processor, build number and stack build.
     		PS-RegisterScript
 		Say "Your system has been modified and requires a restart.  Automatically restarting in 10 seconds..."
 		Wait 10
