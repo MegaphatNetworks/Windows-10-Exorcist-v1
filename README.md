@@ -59,8 +59,11 @@ this script and when to discontinue using it. The script will automatically dete
 under the logged on user profile as well as administrator to prevent itself from re-execution.
 
 ### HOME USERS.  
-Simply run this script on each  of the profiles on the computer, with an Administrator account being the 
+Simply run this script on each of the profiles on the computer, with an Administrator account being the 
 first to execute the script and non-Administrators (or other Administrators) thereafter.  
+
+### WINDOWS 10 HOME EDITION.
+Sorry but once you run this script you will lose the ability to manage local users on your computer.  I fixed this by releasing Windows 10 Local user Manager on 3/23/2021 and you can find it here.  https://github.com/MegaphatNetworks/Windows-10-Local-User-Manager 
 
 ### DOMAIN/AD SYSTEMS.  
 If you are using this in a domain environment, I would suggest including this script in your logon script.
