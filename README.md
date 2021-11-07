@@ -58,23 +58,25 @@ the script will then clean their profile as well.  It is up to the system admini
 this script and when to discontinue using it. The script will automatically determine if it has been previously executed 
 under the logged on user profile as well as administrator to prevent itself from re-execution.
 
-### HOME USERS.  
+### HOME USERS (Non-Domain).  
 Simply run this script on each of the profiles on the computer, with an Administrator account being the 
 first to execute the script and non-Administrators (or other Administrators) thereafter.  
 
 ### WINDOWS 10 HOME EDITION.
-Sorry but once you run this script you will lose the ability to manage local users on your computer.  I fixed this by releasing Windows 10 Local user Manager on 3/23/2021 and you can find it here.  https://github.com/MegaphatNetworks/Windows-10-Local-User-Manager 
+Sorry but once you run this script you will lose the ability to manage local users on your computer.  I wrote a piece of code on 3/23/2021 to help with called the [Windows 10 Local user Manager](https://github.com/MegaphatNetworks/Windows-10-Local-User-Manager)
 
 ### DOMAIN/AD SYSTEMS.  
 If you are using this in a domain environment, I would suggest including this script in your logon script.
 Execution could be as simple as launching from a batch file such as: powershell.exe -ExecutionPolicy Bypass -File .\ThisScript.ps1
-Be sure it executes the first time logged in as a Domain Admin.
+Be sure it executes the first time logged in as a Domain Admin.  It will detect if it has been executed previously to avoid repeat execution.
 
 ### NON-DOMAIN/AD BUSINESS SYSTEMS.
 Run the script the same way as listed above for Home Users.
 
 ### HIPAA Compliancy Notice.  
-Windows 10 is NOT a HIPAA-compliant OS.  Why?  Because of all of the phone-home telemetry included.
+Windows 10 is NOT a HIPAA-compliant OS unless you are running Enterprise edition and even then you need to be in an Active Directory and customize your policies. 
+*What do you mean non HIPAA compliant?*  Exactly that!  Computer information will be transmitted to MS. Why?  Because of all of the phone-home telemetry included. 
+
 While I have not performed any network sniffing to determine if Windows 10 is actually sending any sensitive data back to MS, 
 the mere fact that it phones home with your activity and has access to your information makes it inherently not HIPAA compliant.
 Will this script make your system compliant with HIPAA requirements?  To some degree yes.  It will disconnect the OS from having 
