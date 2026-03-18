@@ -1,10 +1,11 @@
 # The Windows 10 Exorcist                                    
-## by Gabriel Polmar                                      
-## Megaphat Networks                                      
-## www.megaphat.info                                      
 
-## IMPORTANT: This script will make SEVERE changes to your system(s).  That said, let's move on.
-
+## IMPORTANT: This script will make SEVERE changes to your system(s).  That said, let's move on.    
+## Please note this project is considered DEAD!  I am keeping it here so that some people can learn from my script.   
+## The latest versions of Windows updates overrides most settings here and using it after the latest updates will probably break your system.   
+   
+--- 
+   
 ### INTRODUCTION.  
 For decades people have called Microsoft the Evil Empire.  I refused to accept this descriptive
 term as they were simply a very successful software company which I have worked with, respected and watch 
